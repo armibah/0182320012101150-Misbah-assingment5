@@ -1,0 +1,6 @@
+import 'dart:io';
+
+void main() {
+  Directory dir = Directory.current;
+  print('Current working directory: ${dir.path}');
+}
