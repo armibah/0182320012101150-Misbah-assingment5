@@ -1,0 +1,7 @@
+import 'dart:io';
+
+void main() {
+  File file = File('hello.txt');
+  file.writeAsStringSync('Asfaqur Rahman Misbah');
+  print('Name written to hello.txt');
+}
