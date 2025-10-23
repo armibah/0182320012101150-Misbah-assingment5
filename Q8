@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main() {
+  File file = File('students.csv');
+
+  // Write data
+  file.writeAsStringSync('Name,Age,Address\n');
+  file.writeAsStringSync('Rahim,20,Dhaka\n', mode: FileMode.append);
+  file.writeAsStringSync('Karim,21,Chittagong\n', mode: FileMode.append);
+  file.writeAsStringSync('Tania,22,Khulna\n', mode: FileMode.append);
+
+  print('Data written to students.csv');
+
+  // Read data
+  String content = file.readAsStringSync();
+  print('\nReading from CSV file:');
+  print(content);
+}
